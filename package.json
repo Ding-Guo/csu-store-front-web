@@ -1,0 +1,15 @@
+{
+  "name": "csu-store-front-web",
+  "version": "1.0.0",
+  "description": "#### Description 2023年硕士实训课程，用户Web前端原生项目",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "songtie",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.84.0",
+    "webpack-cli": "^5.1.1"
+  }
+}
