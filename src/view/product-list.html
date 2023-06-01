@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%= require('./common/common-head.htm') %>
+    <title>Title</title>
+</head>
+<body>
+    <%= require('./common/nav-top.htm') %>
+    <%= require('./common/nav-search.htm') %>
+    <div class="crumb">
+        <div class="w">
+            <div class="crumb-content">
+                <a href="./index.html" class="link">MyStore</a>
+                <span>></span>
+                <span class="link-text">商品列表</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-wrap w">
+        <ul class="sort-content">
+            <li class="sort-item active" data-type="default">默认排序</li>
+            <li class="sort-item" data-type="price">
+                <span>价格</span>
+                <i class="fa fa-sort-asc"></i>
+                <i class="fa fa-sort-desc"></i>
+            </li>
+        </ul>
+        <ul class="product-list-content">
+<!--             <div class="loading"></div>-->
+            <!--
+            <li class="product-item">
+                <div class="product-img-content">
+                    <a href="./product-detail.html?productId=1" class="link" target="_blank">
+                        <img src="https://tie-demo.oss-cn-hangzhou.aliyuncs.com/mystore-dev/iphone14-1.avif" alt="" class="product-img" alt="{{name}}">
+                    </a>
+                </div>
+                <div class="product-price-content">
+                    <span class="product-price">¥5469.00</span>
+                </div>
+                <div class="product-name-content">
+                    <a href="./product-detail.html?productId={{id}}" class="product-name" target="_blank">
+                        Apple iPhone 14 (A2884) 256GB 蓝色 支持移动联通电信5G 双卡双待手机
+                    </a>
+                </div>
+            </li>
+            <p class="error-tip">很抱歉，找不到您想要的商品。。。</p>
+            -->
+        </ul>
+        <div class="pagination">
+            <!--
+            <div class="page-content">
+                <span class="page-item disabled" data-value="">上一页</span>
+                <span class="page-item active" data-value="1">1</span>
+                <span class="page-item" data-value="2">2</span>
+                <span class="page-item" data-value="3">3</span>
+                <span class="page-item" data-value="4">4</span>
+                <span class="page-item" data-value="">下一页</span>
+                <span class="page-total">1/4</span>
+            </div>
+            -->
+        </div>
+    </div>
+
+
+    <%= require('./common/common-footer.htm') %>
+</body>
+</html>

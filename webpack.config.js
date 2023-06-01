@@ -17,6 +17,7 @@ module.exports = {
     entry: {
         'index'         : './src/page/index/index.js',
         'user-login'    : './src/page/user-login/index.js',
+        'product-list'  : './src/page/product-list/index.js',
         'common'        : './src/page/common/index.js',
     },
     output: {
@@ -49,6 +50,7 @@ module.exports = {
         new MiniCssExtractPlugin({ filename: 'css/[name].css' }),
         new HtmlWebpackPlugin(getHtmlPluginConfig('index')),
         new HtmlWebpackPlugin(getHtmlPluginConfig('user-login')),
+        new HtmlWebpackPlugin(getHtmlPluginConfig('product-list')),
     ],
     resolve: {
         alias: {

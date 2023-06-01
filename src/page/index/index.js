@@ -1,17 +1,17 @@
 require('page/common/nav-top/index.js');
 require('page/common/nav-search/index.js');
+require('utils/unslider/index.js');
 require('./index.css');
+
 const _common_util = require('utils/util.js');
+const bannerHTMLTemplate = require('./banner.string');
 console.log('index.js####');
 
 $(function (){
-   //  console.log('abc');
-   // let a = _common_util.getURLParam('a');
-   // if(a){
-   //     console.log(a);
-   // }
-   //  let b = _common_util.getURLParam('b');
-   //  if(b){
-   //      console.log(b);
-   //  }
+    const bannerHTML = _common_util.renderHTML(bannerHTMLTemplate);
+    // console.log(bannerHTML);
+    $('.banner-content').html(bannerHTML);
+    $('.banner').unslider({
+        dots : true,
+    });
 });

@@ -1,3 +1,4 @@
+const Hogan = require('hogan.js');
 
 const config = {
     serverHost : 'http://localhost:8090',
@@ -69,7 +70,21 @@ const _common_util = {
         if('email' === type){
             return /^\w+([-+.]\w+)*@\w+([-.]\ w+)*\.\w+([-.]\w+)*$/.test(value);
         }
-    }
+    },
+    //使用hogan.js渲染数据到网页上
+    renderHTML : function(htmlTemplate, data){
+        const template = Hogan.compile(htmlTemplate);
+        const result = template.render(data);
+        return result;
+    },
+    //错误提示
+    errorTips : function(msg){
+        alert(msg || '出错啦～～～');
+    },
+    //成功提示
+    successTips : function(msg){
+        alert(msg || '操作成功～～～');
+    },
 };
 
 module.exports = _common_util;
