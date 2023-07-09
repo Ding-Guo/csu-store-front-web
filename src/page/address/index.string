@@ -1,0 +1,19 @@
+<div class="address-list">
+    {{#list}}
+    <div class="address-list-item" data-id="{{id}}">
+        <div class="item-header">
+            <span>{{addressProvince}} {{addressCity}} {{addressDistrict}}</span>
+            <span style="margin-left: 10px;">({{addressName}}) 收</span>
+        </div>
+        <div class="item-body">
+            <span>{{addressDetail}}</span>
+        </div>
+        <div class="item-footer">
+            <span class="btn-mini modify-btn">编辑</span>
+            <span class="btn-mini delete-btn">删除</span>
+        </div>
+    </div>
+    {{/list}}
+    <div class="address-add-item">+</div>
+</div>
+<div id="modal-container"></div>

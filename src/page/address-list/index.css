@@ -1,0 +1,25 @@
+.layout {
+    display: grid;
+    grid-gap: 24px;
+    grid-auto-flow: column;
+    grid-template-columns: 296px 760px;
+}
+
+.layout .sidebar-container {
+    width: 296px;
+}
+
+.layout .main {
+    grid-column: 2;
+}
+
+.btn-radius {
+    border-radius: 6px;
+}
+
+.subhead {
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 8px;
+    font-size: 24px;
+    font-weight: 400;
+}

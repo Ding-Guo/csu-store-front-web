@@ -1,0 +1,15 @@
+<div class="input-number {{size}}">
+    {{#hasSmaller}}
+    <a class="input-number-btn input-number-down">-</a>
+    {{/hasSmaller}}
+    {{^hasSmaller}}
+    <a class="input-number-btn input-number-down disabled">-</a>
+    {{/hasSmaller}}
+    <input type="text" class="input-number-input" value="{{value}}">
+    {{#hasBigger}}
+    <a class="input-number-btn input-number-up">+</a>
+    {{/hasBigger}}
+    {{^hasBigger}}
+    <a class="input-number-btn input-number-up disabled">+</a>
+    {{/hasBigger}}
+</div>
