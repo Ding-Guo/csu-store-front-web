@@ -35,9 +35,12 @@ const _user_login = {
             password : $.trim($('#password').val())
         };
         const validateResult = this.formDataValidate(formData);
+        localStorage.setItem("token", "");
         if(validateResult.status){
             _user_service.login(formData, function (res){
-                console.log(res);
+                console.log(res.token);
+                localStorage.setItem("token", res.token);
+
                 window.location.href = _common_util.getURLParam('redirect') || './index.html';
             }, function (errorMsg){
                 console.log(errorMsg);

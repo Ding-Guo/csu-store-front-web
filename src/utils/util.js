@@ -1,15 +1,22 @@
 const Hogan = require('hogan.js');
 const region = require("data/pca.json");
 
+// const config = {
+//     serverHost : 'http://127.0.0.1:8081',
+// }
 const config = {
-    serverHost : 'http://localhost:8099',
+    serverHost : '/mall',
 }
-
 const _common_util = {
     //向服务器发送请求
+
     request : function(param){
         const _this = this;
+
         $.ajax({
+            headers:{
+                "Authorization" :localStorage.getItem("token")
+            },
             type     : param.method || 'GET',
             url      : param.url || '',
             dataType : param.type || 'JSON',

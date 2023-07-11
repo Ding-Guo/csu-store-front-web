@@ -8,7 +8,14 @@ const _common_util = require("utils/util.js");
 const _order_service = require("service/order-service.js");
 
 const _address = require("page/address/index.js");
-
+const errorItem = {
+    show : function(errorMsg){
+        $('.user-form-error').show().find('.error-message').text(errorMsg);
+    },
+    hide : function(){
+        $('.user-form-error').hide().find('.error-message').text('');
+    }
+};
 const _checkout = {
     init: function () {
         this.onLoad();
@@ -45,14 +52,18 @@ const _checkout = {
     },
     createOrder: function () {
         let addressId = $(".address-list-item.active").data("id");
+        if (!_common_util.validate(addressId,'require')){
+            _common_util.errorTips('地址不能为空')
+        }else {
+            _order_service.createOrder(JSON.stringify({
+                addressId: addressId
+            }), function (res) {
+                window.location.href = "./order-info.html?orderNo=" + res.orderNo;
+            }, function (errorMsg) {
+                _common_util.errorTips(errorMsg);
+            });
+        }
 
-        _order_service.createOrder(JSON.stringify({
-            addressId: addressId
-        }), function (res) {
-            window.location.href = "./order-info.html?orderNo=" + res.orderNo;
-        }, function (errorMsg) {
-            _common_util.errorTips(errorMsg);
-        });
     }
 };
 

@@ -75,7 +75,8 @@ const _order_info = {
     },
     cancelOrder: function () {
         let requestParam = this.requestParam;
-        _order_service.cancelOrder(JSON.stringify(requestParam), function (res) {
+        console.log(requestParam.orderNo);
+        _order_service.cancelOrder(requestParam, function (res) {
             _common_util.successTips("订单取消成功");
             window.location.reload();
         }, function (errMsg) {

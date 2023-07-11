@@ -41,11 +41,11 @@ const _order_service = {
         });
     },
     // 取消订单
-    cancelOrder: function (orderInfo, resolve, reject) {
+    cancelOrder: function (requestParam, resolve, reject) {
         _common_util.request({
             url     : _common_util.getServerURL('/order/cancel'),
-            method  : 'POST',
-            data    : orderInfo,
+            method  : 'GET',
+            data    : requestParam,
             success : resolve,
             error   : reject,
         });

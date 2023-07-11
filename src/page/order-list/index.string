@@ -29,7 +29,7 @@
                     <span class="payment">总金额：{{paymentPrice}}</span>
                 </td>
             </tr>
-            {{#orderItemVOList}}
+            {{#orderItemVoList}}
             <tr class="item-body">
                 <td>
                     <div class="product-info">
@@ -54,14 +54,13 @@
                 </td>
                 <td>
                     <span>{{statusDesc}}</span>
-                    <br />
-                    <a href="./order-info.html?orderNo={{orderNo}}" class="link">订单详情</a>
                 </td>
                 <td>
-                    <a class="link">再次购买</a>
+                    <a href="./order-info.html?orderNo={{orderNo}}" class="link">订单详情</a>
                 </td>
+
             </tr>
-            {{/orderItemVOList}}
+            {{/orderItemVoList}}
 
             {{#addressVO}}
             <tr class="item-footer">
